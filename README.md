@@ -55,18 +55,18 @@ The following examples show each options separately, you can of course combine m
 
 ### 2.1 Check git status
 
-Without submodules (`-s`)
-```shell
-$ check_git -d /shared/httpd/my-project/ -s -n My-Project
-[SUCCESS] My-Project git repo is healthy.
-[SUCCESS]  Git status: clean
-```
-With submodules (`-S`)
+With submodules (`-s`)
 ```shell
 $ check_git -d /shared/httpd/my-project/ -S -n My-Project
 [CRITICAL] My-Project git repo has errors.
 [SUCCESS]  Git status: clean
 [CRITICAL] Git status: submodule(s) unclean
+```
+Without submodules (`-S`)
+```shell
+$ check_git -d /shared/httpd/my-project/ -s -n My-Project
+[SUCCESS] My-Project git repo is healthy.
+[SUCCESS]  Git status: clean
 ```
 
 
